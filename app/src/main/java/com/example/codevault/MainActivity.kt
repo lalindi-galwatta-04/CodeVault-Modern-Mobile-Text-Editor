@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
                     )
                 }
 
-                //Last successfully saved text.
+                //Last successfully saved text
 
                 var savedText by remember {
                     mutableStateOf("")
@@ -101,12 +101,7 @@ class MainActivity : ComponentActivity() {
                     mutableStateOf(false)
                 }
 
-                /*
-                 * Selected historical version.
-                 *
-                 * The next milestone will use this to open a
-                 * reconstructed read-only snapshot.
-                 */
+
                 var selectedHistoryVersion by remember {
                     mutableStateOf<FileVersion?>(null)
                 }
