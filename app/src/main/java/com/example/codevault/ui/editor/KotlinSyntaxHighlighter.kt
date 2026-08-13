@@ -9,15 +9,12 @@ import androidx.compose.ui.text.input.OffsetMapping
 import androidx.compose.ui.text.input.TransformedText
 import androidx.compose.ui.text.input.VisualTransformation
 
-//Kotlin Syntax Highlighter
 
 fun highlightKotlinCode(
     code: String
 ): AnnotatedString {
 
     val builder = AnnotatedString.Builder(code)
-
-    //Colors
 
     val keywordColor = Color(0xFF7B1FA2)
 
@@ -27,7 +24,6 @@ fun highlightKotlinCode(
 
     val numberColor = Color(0xFF1565C0)
 
-    //Kotlin Keywords
 
     val keywords = listOf(
 
@@ -79,7 +75,6 @@ fun highlightKotlinCode(
         "where"
     )
 
-    //Keyword Highlighting
 
     val keywordPattern = Regex(
         "\\b(" +
@@ -109,7 +104,6 @@ fun highlightKotlinCode(
             )
         }
 
-    // Number Highlighting
 
     val numberPattern = Regex(
         "\\b\\d+(\\.\\d+)?\\b"
@@ -133,7 +127,6 @@ fun highlightKotlinCode(
             )
         }
 
-    //String Highlighting
 
     val stringPattern = Regex(
         "\"(?:\\\\.|[^\"\\\\])*\""
@@ -157,7 +150,6 @@ fun highlightKotlinCode(
             )
         }
 
-    //Single-line Comments
 
     val singleLineCommentPattern = Regex(
         "//.*"
@@ -185,7 +177,7 @@ fun highlightKotlinCode(
             )
         }
 
-    //Multi-line Comments
+
 
     val multiLineCommentPattern = Regex(
         "/\\*[\\s\\S]*?\\*/"
@@ -213,13 +205,11 @@ fun highlightKotlinCode(
             )
         }
 
-    //Return the Highlighted Text
 
     return builder.toAnnotatedString()
 }
 
 
-//Kotlin Syntax Visual Transformation
 
 class KotlinSyntaxVisualTransformation :
     VisualTransformation {
@@ -228,12 +218,12 @@ class KotlinSyntaxVisualTransformation :
         text: AnnotatedString
     ): TransformedText {
 
-        // Get the original plain text.
+
 
         val originalCode =
             text.text
 
-        // Apply syntax colors/styles.
+
 
         val highlightedCode =
             highlightKotlinCode(
