@@ -328,7 +328,7 @@ class MainActivity : ComponentActivity() {
 
                             savedText = openedText
 
-                            // Add the successfully opened fileto Recent Files.
+                            // Add the successfully opened file to Recent Files.
                             RecentFilesManager.addRecentFile(
                                 context = this@MainActivity,
                                 fileName = fileName,
@@ -352,7 +352,7 @@ class MainActivity : ComponentActivity() {
                         }
                     }
 
-                //NDROID SYSTEM BACK
+                // ANDROID SYSTEM BACK
 
                 BackHandler(
                     enabled =
@@ -790,7 +790,8 @@ class MainActivity : ComponentActivity() {
                                 }
                             },
 
-                            //LOCK / UNLOCK CURRENT FILE                       onToggleReadOnly = {
+                            //LOCK / UNLOCK CURRENT FILE
+                            onToggleReadOnly = {
 
                                 val currentUri =
                                     fileUri
@@ -1206,6 +1207,7 @@ class MainActivity : ComponentActivity() {
                             onVersionClick = {
                                     version ->
 
+                                selectedHistoryVersion = version
 
                                 currentScreen =
                                     "historicalVersion"
@@ -1401,7 +1403,7 @@ class MainActivity : ComponentActivity() {
 
                                         clearUndoRedoHistory()
 
-                                        /Reset Search state because the editorcontent has changed substantially.
+                                        // Reset Search state because the editor content has changed substantially.
 
                                         showSearchPanel =
                                             false
@@ -1658,7 +1660,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    //IND MATCHES
+    // FIND MATCHES
     private fun findMatches(
         text: String,
         query: String
