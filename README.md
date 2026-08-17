@@ -30,7 +30,7 @@ CodeVault is a modern mobile text editor developed using **Kotlin** and **Jetpac
 - Search & Replace
 - Kotlin Syntax Highlighting
 
-### Member 2
+### Member 2 - M.L.M.M.L Mahalaxa
 - Recent Files
 - Word Wrap
 - Read-Only Mode
